@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/info.js"></script>
+</head>
+<body id="body">
+    <header>
+         JavaScript - изучение веб-разработки
+        <p id="userH">Привет, <span id="user"></span>!</p>
+        <script defer>
+            let name = prompt("Введите ваше имя");
+            document.getElementById("user").innerHTML = name;
+        </script>
+    </header>
+    <div class="main">
+        <div class="container_nav">
+            <ul class="nav">
+                <li><a href="#areaTriangle">Площадь треугольника</a></li>
+                <li><a href="#strings">Строки</a></li>
+                <li><a href="#array">Массив</a></li>
+                <li><a href="#timer">Таймер</a></li>
+                <li><a href="#test">Тест</a></li>
+                <li><a href="#ph">Заставка</a></li>
+            </ul>
+        </div>
+        <div class="container_content">
+            <div class="container_task">
+                <p class="title">Информация по JS</p>
+                JavaScript — язык со слабой динамической неявной типизацией, автоматическим управлением памятью и прототипным наследованием.
+<br>
+JavaScript состоит из трёх обособленных частей:
+<br>
+ядро (ECMAScript),<br>
+объектная модель браузера (Browser Object Model или BOM)<br>
+объектная модель документа (Document Object Model или DOM)<br>
+<br>Важная особенность JS - объектная ориентированность. Программисту доступны многочисленные объекты, такие, как документы, гиперссылки, формы, фреймы и т.д. Объекты характеризуются описательной информацией (свойствами) и возможными действиями (методами).</br>
+<br>JavaScript не предназначен для создания автономных приложений. Программа на JS встраивается непосредственно в исходный текст HTML-документа и интерпретируется брaузером по мере загрузки этого документа. С помощью JavaScript можно динамически изменять текст загружаемого HTML-документа и реагировать на события, связанные с действиями посетителя или изменениями состоятия документа или окна.</br>
+<br>Типы данных:</br>
+<br>Number
+String
+Boolean
+Object
+Function
+Array
+Date
+RegExp
+Null
+Undefined</br>
+<br>Переменные в JavaScript</br>
+<br>Имя переменной не должно совпадать с зарезервированными ключевыми словами JavaScript: abstract, boolean, break, byte, case, catch, char, class, const, continue, default, do, double, else, extends, false, final, finally, float, for, function, goto, if, implements, import, in, instanseof, int, interface, long, native, new, null, package, private, protected, public, return, short, static, super, sinchronized, switch, this, throw, throws, transient, true, try, typeof, var, void, wich.</br>
+<br>Все переменные в JavaScript объявляются с помощью ключевого слова let. При объявлении тип переменной не указывается. Этот тип присваивается переменной только тогда, когда ей присваивается какое-либо значение.</br>
+<br>Используя JS можно делать различные проекты, некоторые из них представлены ниже...</br>            </div>
+            <div class="container_task" id=areaTriangle>
+                <script src="scripts/areaTriangle.js"></script>
+                <p class="title">Вычислить площадь треугольника</p>
+                <p style="float:left">Введите основание треугольника:</p>
+                <input type="text" id="footing">
+                <p style="clear: both; float: left">Введите высоту треугольника:</p>
+                <input style="float:left; margin-left: 23px" type="text" id="height">
+                <button style = "clear: both; float: left" onclick="square()">Вычислить площадь</button>
+                <p class="info" onmouseover="info('areaTriangle', 0)" onmouseout="removeInfo('areaTriangle')">info</p>
+            </div>
+            <div class="container_task" id="strings">
+                <script src="scripts/strings.js"></script>
+                <p class="title">Сравнение строк</p>
+                <p style="float:left">Введите первую строку:</p>
+                <input type="text" id="str1">
+                <p style="clear: both; float: left">Введите вторую строку:</p>
+                <input style="float:left" type="text" id="str2">
+                <button style = "clear: both; float: left" onclick="string()">Сравнить строки</button>
+                <p class="info" onmouseover="info('strings', 1)" onmouseout="removeInfo('strings')">info</p>
+            </div>
+            <div class="container_task" id="array">
+                <script src="scripts/minMaxArray.js"></script>
+                <p class="title">Работа с массивом</p>
+                <p>Введите массив из 5 элементов, через пробел</p>
+                <input type="text" id="arr"><br>
+                <button onclick ="Arr()" >Вывести max и min значения</button>
+                <p class="info" onmouseover="info('array', 2)" onmouseout="removeInfo('array')">info</p>
+            </div>
+            <div class="container_task" id="timer">
+                <script src="scripts/timer.js"></script>
+                <p class="title">Таймер</p>
+                <p id="time">Time: 0</p>
+                <button onclick = "Start()">Пуск</button>
+                <button onclick = "Stop()">Стоп</button>
+                <p class="info" onmouseover="info('timer', 3)" onmouseout="removeInfo('timer')">info</p>
+            </div>
+            <div class="container_task" id="test">
+                <script defer src="scripts/qustions.js"></script>
+                <p class="title">Тест</p>
+                <div id="area_test"></div>
+                <button onclick = "checkAnswers()">Показать результат</button>
+                <p class="info" onmouseover="info('test', 4)" onmouseout="removeInfo('test')">info</p>
+            </div>
+            <div class="container_task" id="ph">
+                <script src="scripts/photo.js"></script>
+                <p class="title">Заставка</p>
+                <button onclick="photo()">показать заставку</button>
+                <p class="info" onmouseover="info('ph', 5)" onmouseout="removeInfo('ph')">info</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+</html>

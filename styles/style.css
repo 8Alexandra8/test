@@ -1,0 +1,146 @@
+*, 
+*:before, 
+*:after{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+}
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #f4aa75;
+    font-weight: bolder;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 12px;
+    position: relative;
+}
+
+.main{
+    width: 100%;
+    height: 1750px;
+}
+
+.main .container_nav{
+    width: 16%;
+    height: 100%;
+    float: left;
+    background-color: #f4aa75;
+}
+
+.main .container_content{
+    width: 84%;
+    height: 100%;
+    padding: 5px;
+    float: left;
+    position: relative;
+}
+.nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.nav li{
+    width: 100%;
+    height: 30px;
+    font-weight: bolder;
+    border: 3px solid #9c5006;
+    margin-bottom: 1px;
+    background-color: #f4aa75;
+}
+
+.nav li:hover{
+    background-color: aliceblue;
+}
+
+.container_task{
+    border: 2px solid black;
+    width: 100%;
+    margin-bottom: 7px;
+    position: relative;
+}
+
+.container_task .title{
+    display: block;
+    width: 100%;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+
+}
+#areaTriangle{
+    height: 90px;
+}
+
+#strings{
+    height: 90px;
+}
+#array{
+    height: 90px;
+}
+#timer{
+    height: 68px;
+}
+
+.info{
+    background-color: #ef433f;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    border-radius: 2px;
+    border: 2px solid black;
+}
+
+#divinfo{
+    width: 300px;
+    position: absolute;
+    background-color: white;
+    top: 2px;
+    right: 35px;
+    border: 2px solid black;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+footer{
+    width: 100%;
+    height: 80px;
+    background-color: #f4aa75;
+}
+
+.imgfoto{
+    height: 100%;
+    width: 100%;
+    align-items:center;
+    justify-content: center;
+    object-fit: contain;
+}
+
+.divfoto{
+    position: absolute;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5)
+}
+.pfoto{
+    left: 2px;
+    background-color: black;
+    color :white;
+    font-size: 30px;
+    position: absolute;
+    z-index: 50;
+}
+#userH{
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    font-size: 15px;
+    color: white;
+}
