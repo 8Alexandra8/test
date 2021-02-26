@@ -26,13 +26,16 @@ header{
 
 .main{
     width: 100%;
-    height: 1750px;
+    height: 1850px;
+    display: flex; 
+    flex-direction: row ;
+    
 }
 
 .main .container_nav{
     width: 16%;
     height: 100%;
-    float: left;
+    
     background-color: #f4aa75;
 }
 
@@ -40,7 +43,7 @@ header{
     width: 84%;
     height: 100%;
     padding: 5px;
-    float: left;
+    
     position: relative;
 }
 .nav {
@@ -66,6 +69,9 @@ header{
     width: 100%;
     margin-bottom: 7px;
     position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    padding-left: 5px;
 }
 
 .container_task .title{
@@ -76,19 +82,8 @@ header{
     text-align: center;
 
 }
-#areaTriangle{
-    height: 90px;
-}
 
-#strings{
-    height: 90px;
-}
-#array{
-    height: 90px;
-}
-#timer{
-    height: 68px;
-}
+
 
 .info{
     background-color: #ef433f;

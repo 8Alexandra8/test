@@ -12,6 +12,21 @@
         <p id="userH">Привет, <span id="user"></span>!</p>
         <script defer>
             let name = prompt("Введите ваше имя");
+            function checkName(name){
+                name = name.toLowerCase();
+                if(name === "" || name.length===1){
+                    return false;
+                }
+                for(let i = 0;i<name.length;i++){
+                    if(!('a'<=name.charAt(i) & name.charAt(i)<='z') & !('а'<=name.charAt(i) & name.charAt(i)<='я')){
+                        return false;
+                    }
+                }
+                return true;
+            }
+            while(!checkName(name)){
+                name = prompt("Введите корректное значение имя");
+            }
             document.getElementById("user").innerHTML = name;
         </script>
     </header>
@@ -56,21 +71,21 @@ Undefined</br>
             <div class="container_task" id=areaTriangle>
                 <script src="scripts/areaTriangle.js"></script>
                 <p class="title">Вычислить площадь треугольника</p>
-                <p style="float:left">Введите основание треугольника:</p>
+                <p>Введите основание треугольника:</p>
                 <input type="text" id="footing">
-                <p style="clear: both; float: left">Введите высоту треугольника:</p>
-                <input style="float:left; margin-left: 23px" type="text" id="height">
-                <button style = "clear: both; float: left" onclick="square()">Вычислить площадь</button>
+                <p>Введите высоту треугольника:</p>
+                <input  type="text" id="height">
+                <button  onclick="square()">Вычислить площадь</button>
                 <p class="info" onmouseover="info('areaTriangle', 0)" onmouseout="removeInfo('areaTriangle')">info</p>
             </div>
             <div class="container_task" id="strings">
                 <script src="scripts/strings.js"></script>
                 <p class="title">Сравнение строк</p>
-                <p style="float:left">Введите первую строку:</p>
+                <p >Введите первую строку:</p>
                 <input type="text" id="str1">
-                <p style="clear: both; float: left">Введите вторую строку:</p>
-                <input style="float:left" type="text" id="str2">
-                <button style = "clear: both; float: left" onclick="string()">Сравнить строки</button>
+                <p >Введите вторую строку:</p>
+                <input  type="text" id="str2">
+                <button  onclick="string()">Сравнить строки</button>
                 <p class="info" onmouseover="info('strings', 1)" onmouseout="removeInfo('strings')">info</p>
             </div>
             <div class="container_task" id="array">
@@ -84,7 +99,7 @@ Undefined</br>
             <div class="container_task" id="timer">
                 <script src="scripts/timer.js"></script>
                 <p class="title">Таймер</p>
-                <p id="time">Time: 0</p>
+                <p id="time">Time: 0:00:00</p>
                 <button onclick = "Start()">Пуск</button>
                 <button onclick = "Stop()">Стоп</button>
                 <p class="info" onmouseover="info('timer', 3)" onmouseout="removeInfo('timer')">info</p>
